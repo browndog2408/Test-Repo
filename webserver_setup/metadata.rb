@@ -1,0 +1,7 @@
+name 'webserver_setup'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures webserver_setup'
+long_description 'Installs/Configures webserver_setup'
+version '0.1.0'
