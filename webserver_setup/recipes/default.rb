@@ -20,49 +20,49 @@ not_if "$chocolateyBin = [Environment]::GetEnvironmentVariable('ChocolateyInstal
 end
 
 powershell_script 'Install Classic Shell' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin classic-shell -y'   
+code 'choco install classic-shell -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Chrome' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin googlechrome -y'   
+code 'choco install googlechrome -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Firefox' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin firefox -y'   
+code 'choco install firefox -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Winrar' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin winrar -y'   
+code 'choco install winrar -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Notepad++' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin notepadplusplus -y'   
+code 'choco install notepadplusplus -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Javaruntime' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin javaruntime -y'   
+code 'choco install javaruntime -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
 end
 
 powershell_script 'Install Silverlight' do
-code '$chocolateyBin = [Environment]::GetEnvironmentVariable("ChocolateyInstall", "Machine") + "\bin\cinst.exe"; & $chocolateyBin silverlight -y'   
+code 'choco install silverlight -y'   
 guard_interpreter :powershell_script
 not_if "(Test-Path $chocolateyBin) -eq $false"
 
