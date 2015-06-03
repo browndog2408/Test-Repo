@@ -19,54 +19,6 @@ not_if "$chocolateyBin = [Environment]::GetEnvironmentVariable('ChocolateyInstal
 
 end
 
-powershell_script 'Install Classic Shell' do
-code 'choco install classic-shell -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Chrome' do
-code 'choco install googlechrome -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Firefox' do
-code 'choco install firefox -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Winrar' do
-code 'choco install winrar -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Notepad++' do
-code 'choco install notepadplusplus -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Javaruntime' do
-code 'choco install javaruntime -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
-
-powershell_script 'Install Silverlight' do
-code 'choco install silverlight -y'   
-guard_interpreter :powershell_script
-not_if "(Test-Path $chocolateyBin) -eq $false"
-
-end
 
 service 'gupdate' do
 action [:disable, :stop]
